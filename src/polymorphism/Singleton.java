@@ -1,6 +1,6 @@
 package polymorphism;
 
-class Singleton{
+class SingletonClass{
 	/*
 	 * 싱글톤 디자인 패턴의 필요성
 	 * 그러니까, static 변수만 있다던가 기능(메서드)만 있는 클래스의 경우는 
@@ -24,10 +24,10 @@ class Singleton{
 	 * 클래스 외부에서는 생성자를 호출하지 못하게 하고
 	 * 클래스 내부에서 객체를 생성해서 반환해줌. 
 	 */		
-		private static Singleton instance = new Singleton();
-		private Singleton() {}
+		private static SingletonClass instance = new SingletonClass();
+		private SingletonClass() {}
 		
-		public static Singleton getInstance() {
+		public static SingletonClass getInstance() {
 			return instance;
 		}
 		
@@ -37,10 +37,10 @@ class Singleton{
 
 }
 
-public class SingletonTest {
+public class Singleton {
 	public static void main(String[] args) {
-		Singleton sc1 = Singleton.getInstance();
-		Singleton sc2 = Singleton.getInstance();
+		SingletonClass sc1 = SingletonClass.getInstance();
+		SingletonClass sc2 = SingletonClass.getInstance();
 		
 		System.out.printf("두 객체는 같은가? %b%n", sc1==sc2);
 		sc1.sayHello();
